@@ -1,0 +1,331 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Secular+One&display=swap');
+
+/* GLOBAL RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(112deg, rgb(36, 34, 33) 76%, rgb(49, 10, 5) 100%);
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* HEADER TEXT GLOW */
+h2.food-drink-title,
+h3,
+h4 {
+    font-family: "Fredericka the Great", serif;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* BUTTON BASE STYLING */
+button {
+    cursor: pointer;
+    border: none;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+
+/* SECTION CONTAINER STYLES */
+.section-container {
+    background: linear-gradient(135deg, rgba(100,101,101,0.99) 1%, rgba(16,16,16,1) 16%, rgba(17,15,15,1) 82%, rgba(255,140,0,0.4) 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 450px;
+    margin: 20px auto;
+    color: white;
+}
+
+/* FOOD AND DRINK LIST */
+ul.food-drink-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* FOOD AND DRINK TITLE */
+h2.food-drink-title {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+/* FOOD AND DRINK CONTAINER */
+article.food-drink-container {
+    margin-top: 10px;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+/* FOOD AND DRINK LIST ITEM */
+li.food-drink-li {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+/* FOOD AND DRINK IMAGE */
+img.food-drink-image {
+    display: block;
+    margin: 10px auto;
+    padding-bottom: 3%;
+    width: auto;
+    height: 250px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* FOOD DESCRIPTION AND COUNTRY */
+.food-drink-desc, .food-drink-country {
+    margin-bottom: 6%;
+}
+
+/* BUTTON STYLES */
+.add-btn, .remove-btn, .info-btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ADD BUTTON */
+.add-btn {
+    background-color: rgba(34, 139, 34, 0.9);
+}
+.add-btn:hover {
+    background-color: rgba(50, 205, 50, 0.9);
+    transform: scale(1.1);
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+    background-color: rgba(226, 41, 63, 0.9);
+}
+.remove-btn:hover {
+    background-color: rgba(255, 69, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* INFO BUTTON */
+.info-btn {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, rgba(247, 246, 244, 0.9) 0%, rgba(255, 94, 0, 1) 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.info-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+.info-btn:active{
+    color: rgb(111, 111, 111);
+}
+
+/* HIDDEN IMAGES AND DISPLAY */
+.food-drink-image.hidden,
+.display-info {
+    display: none;
+}
+/* DISPLAY ERRORMSG */
+.error-msg{
+    color: red;
+    font-family: "Merriweather", serif;
+    font-size: 1.5rem;
+
+}
+.search-input{
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    opacity: 0.5;
+}
+
+.input-section{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    
+}
+
+/* SELECTED SECTION STYLING */
+.selected {
+    background: linear-gradient(135deg, rgba(100,101,101,0.99) 1%, rgba(16,16,16,1) 16%, rgba(17,15,15,1) 82%, rgba(255,140,0,0.4) 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  rgba(240, 204, 47, 0.3);
+    width: 80%;
+    max-width: 450px;
+    margin: 20px auto;
+    color: white;
+}
+
+/* SELECTION BUTTONS */
+.menu-toggle {
+    background: linear-gradient(135deg, rgba(19,21,20,1) 55%, rgba(26, 21, 16, 0.7) 100%);
+    color: white;
+    padding: 15px 110px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgb(107, 107, 107) 0%, rgb(255, 255, 255) 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7), 0 0 15px rgb(0, 0, 0);
+}
+
+.menu-toggle.active {
+    border: 2px solid rgba(255,255,255,0.8);
+    background: linear-gradient(135deg, rgba(19,21,20,1) 55%, rgba(255,140,0,0.7) 100%);
+    box-shadow: 0 6px 12px rgba(49, 49, 49, 0.7), 0 0 20px rgba(255, 255, 254, 0.63);
+}
+
+/* SMALL CARD BUTTONS */
+
+
+/* SELECTION CONTAINER */
+.selection-container {
+    height: 330px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.selection-container::-webkit-scrollbar {
+    display: none;
+}
+
+.selection-container {
+    scrollbar-width: none;
+}
+
+
+
+/* SMALL CARD STYLING */
+.small-card {
+    height: 100%;
+    flex: 0 0 60%;
+    background: rgba(19,21,20,1);
+    border: 3px solid rgba(255, 8, 0, 0);
+    border-radius: 8px;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgb(255, 255, 255);
+}
+
+
+
+.small-card img {
+    width: auto;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.small-card h3 {
+    margin: 10px 0;
+    font-family: "Fredericka the Great", serif;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.small-card p {
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+    margin-bottom: 10px;
+}
+
+
+/* LEFT/RIGHT NAVIGATION BUTTONS */
+.nav-btn {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.247) 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(134, 127, 118, 0.9);
+}
+
+.left-btn {
+    left: 155px;
+    top: 350px;
+}
+
+.right-btn {
+    right: 155px;
+    top: 350px;
+}
+
+/* BUTTON BASE STYLING */
+button {
+    cursor: pointer;
+    border: none;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
