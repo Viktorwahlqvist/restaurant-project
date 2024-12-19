@@ -380,11 +380,6 @@
     --header-font-1: "Alfa Slab One", serif;
     --header-font-2: "Bebas Neue", sans-serif;
   }
-  
-=======
-    overflow-x: hidden;
-    
-}
 /* BODY STYLES */
 body {
     background: linear-gradient(112deg, rgba(19,21,20,1) 76%, rgba(81,0,0,1) 100%);
