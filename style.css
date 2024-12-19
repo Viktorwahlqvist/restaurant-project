@@ -7,14 +7,14 @@
   }
   
   /* General container for sections, ensuring they don't exceed a maximum width and have padding */
-  .section__container {
+  .section-container {
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
   }
   
   /* Styling for section headers, including font size, weight, color, and text shadow */
-  .section__header {
+  .section-header {
     font-size: 3rem;
     font-weight: 500;
     font-family: var(--header-font-1);
@@ -25,7 +25,7 @@
   }
   
   /* Styling for section descriptions, including color and line-height */
-  .section__description {
+  .section-description {
     font-weight: 500;
     color: var(--text-dark);
     line-height: 1.75rem;
@@ -79,7 +79,7 @@
   }
   
   /* Header styling for the navigation menu */
-  .nav__header {
+  .nav-header {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -88,17 +88,17 @@
   }
   
   /* Logo styling */
-  .nav__logo img {
+  .nav-logo img {
     width: 50px;
   }
   
   /* Hides the dark logo (used in light mode) */
-  .nav__logo-dark {
+  .nav-logo-dark {
     display: none;
   }
   
   /* Menu button styling */
-  .nav__menu__btn {
+  .nav-menu-btn {
     margin-right: 15px;
     font-size: 1.5rem;
     color: rgb(145, 18, 18);
@@ -106,7 +106,7 @@
   }
   
   /* Navigation links, initially hidden, are styled to appear as a column on mobile */
-  .nav__links {
+  .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
@@ -125,12 +125,12 @@
   }
   
   /* When the nav is open, it slides down into view */
-  .nav__links.open {
+  .nav-links.open {
     transform: translateY(0);
   }
   
   /* Styling for individual navigation links */
-  .nav__links a {
+  .nav-links a {
     font-weight: 600;
     white-space: nowrap;
     color: beige;
@@ -138,19 +138,19 @@
   }
   
   /* Styling for navigation links when hovered */
-  .nav__links a:hover {
+  .nav-links a:hover {
     color: beige;
   }
   
   /* Header content styling (image and text) */
-  .header__container {
+  .header-container {
     display: grid;
     gap: 2rem;
     overflow: hidden;
   }
   
   /* Image inside the header */
-  .header__image img {
+  .header-image img {
     max-width: 600px;
     margin-inline: auto;
     border-radius: 30px;
@@ -158,7 +158,7 @@
   }
   
   /* Styling for the subtitle in the header */
-  .header__content h2 {
+  .header-content h2 {
     max-width: 400px;
     margin-inline: auto;
     margin-bottom: 2rem;
@@ -172,7 +172,7 @@
   }
   
   /* Styling for the main heading in the header */
-  .header__content h1 {
+  .header-content h1 {
     font-size: 4.5rem;
     font-weight: 500;
     font-family: var(--header-font-1);
@@ -183,12 +183,12 @@
   }
   
   /* Styling for the span inside the main heading */
-  .header__content h1 span {
+  .header-content h1 span {
     font-size: 3rem;
   }
   
   /* Event section content styling */
-  .event__content {
+  .event-content {
     display: grid;
     gap: 2rem;
     padding: 1rem;
@@ -199,13 +199,13 @@
   }
   
   /* Text styling for event details */
-  .event__details {
+  .event-details {
     text-align: center;
 
   }
   
   /* Header for event details */
-  .event__details h3 {
+  .event-details h3 {
     font-size: 2rem;
     font-weight: 500;
     font-family: var(--header-font-2);
@@ -213,26 +213,26 @@
   }
   
   /* Section header styling inside the event details */
-  .event__details .section__header {
+  .event-details .section-header {
     margin-bottom: 1rem;
   }
   
   /* Footer content styling */
-  .footer__content {
+  .footer-content {
     margin-top: 1rem;
     display: grid;
     gap: 1rem;
   }
   
   /* Footer text styling */
-  .footer__content p {
+  .footer-content p {
     font-weight: 5500;
     color: yellow;
     line-height: 1.75rem;
   }
   
   /* Social media links in the footer */
-  .footer__socials {
+  .footer-socials {
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -240,13 +240,13 @@
   }
   
   /* Styling for social media icons */
-  .footer__socials a {
+  .footer-socials a {
     font-size: 1.5rem;
     color: whitesmoke;
   }
   
   /* Footer bar with text, styling for company address */
-  .footer__bar {
+  .footer-bar {
     padding: 0;
     font-size: 0.9rem;
     color: rgb(81, 84, 237);
@@ -255,7 +255,7 @@
   
   /* Media query for devices with widths greater than 540px */
   @media (width > 540px) {
-    .banner__container {
+    .banner-container {
       grid-template-columns: repeat(2, 1fr);
     }
   
@@ -279,31 +279,31 @@
       gap: 1rem;
     }
   
-    .nav__header {
+    .nav-header {
       padding: 0;
       background-color: transparent;
     }
   
-    .nav__logo img {
+    .nav-logo img {
       max-width: 250px;
     }
   
     /* Switch to dark logo */
-    .nav__logo-dark {
+    .nav-logo-dark {
       display: flex;
     }
   
-    .nav__logo-white {
+    .nav-logo-white {
       display: none;
     }
   
     /* Hide the menu button on larger screens */
-    .nav__menu__btn {
+    .nav-menu-btn {
       display: none;
     }
   
     /* Style the navigation links to display inline for larger screens */
-    .nav__links {
+    .nav-links {
       position: static;
       padding: 0;
       flex-direction: row;
@@ -314,52 +314,52 @@
     }
   
     /* Header content styling for larger screens */
-    .header__container {
+    .header-container {
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
-    .header__content h2 {
+    .header-content h2 {
       margin-inline-start: unset;
     }
   
-    .header__content h1 {
+    .header-content h1 {
       text-align: left;
     }
   
     /* Event section grid for larger screens */
-    .event__content {
+    .event-content {
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
   
-    .event__image {
+    .event-image {
       grid-area: 1/2/2/3;
     }
   
     /* Align event details text to the left on larger screens */
-    .event__details,
-    .event__details .section__header {
+    .event-details,
+    .event-details .section-header {
       text-align: left;
     }
   
     /* Footer content grid for larger screens */
-    .footer__content {
+    .footer-content {
       grid-template-columns: repeat(2, 1fr);
       color: #f4ece3;
     }
   
-    .footer__links li {
+    .footer-links li {
       justify-content: flex-end;
     }
   
-    .footer__socials {
+    .footer-socials {
       justify-content: flex-end;
     }
   }
  
  /* Media query for devices with widths greater than 1024px (larger screens) */
   @media (width > 1024px) {
-    .order__grid {
+    .order-grid {
       gap: 2rem;
     }
   } 
