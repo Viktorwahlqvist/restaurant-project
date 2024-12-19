@@ -2,6 +2,7 @@
 import {db} from "./db.js";
 import {displayMenu, searchMenu, displayCheckOut} from "./ui.js";
 
+
 // If user is on menu.html page, display menu, drinks, bbqs and steaks
 if (window.location.pathname.endsWith('menu.html')) {
     document.addEventListener('DOMContentLoaded', () => {
