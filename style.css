@@ -7,19 +7,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+    overflow-x: hidden;
     
 }
 /* BODY STYLES */
 body {
-    position: relative;
     background: linear-gradient(112deg, rgba(19,21,20,1) 76%, rgba(81,0,0,1) 100%);
     height: 100%;
-    min-height: 100vh;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    overflow-x: hidden;
 }
 
 /* SECTION CONTAINER STYLES */
@@ -27,7 +24,6 @@ body {
     background: linear-gradient(135deg, rgba(100,101,101,0.99) 1%, rgba(16,16,16,1) 16%, rgba(17,15,15,1) 82%, rgba(17,14,14,0) 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    border: solid 1px rgba(255, 255, 255, 0.507);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -35,6 +31,7 @@ body {
     max-width: 400px;
     margin: 20px auto;
 }
+
 /* FOOD AND DRINK LIST */
 ul.food-drink-ul {
     list-style: none;
@@ -141,18 +138,6 @@ img.food-drink-image {
 .info-btn:active{
     color: rgb(111, 111, 111);
 }
-/* BACK BTN*/
-.back-btn{
-    margin-left: 90%;
-    background-color: transparent;
-    font-size: 2rem;
-    border: none;
-    color: #34C757;
-
-}
-.back-btn:active{
-    color: black;
-}
 
 /* HIDDEN IMAGES AND DISPLAY */
 .food-drink-image.hidden,
@@ -180,47 +165,5 @@ img.food-drink-image {
     width: 100%;
     margin-top: 5%;
     text-align: center;
-}
-
-.checkout-name, .checkout-quantity, .totalAmountToPay, .product-price{
-    color: white;
-    font-size: 1.25rem;
-    font-family: "Merriweather", serif;
-}
-
-.checkout-li{
-    display: flex;
-    justify-content: space-between;  /* Dela upp innehållet mellan namn, pris och kvantitet */
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-.checkout-btn {
     
-    position: sticky;
-    top: 50%;
-    left: 15%;
-    font-size: 2rem;
-    z-index: 1000;
-}
-.table-input,.Purchase-btn{
-    margin-top: 5%;
-    font-size: 1.25rem;
-    font-family: "Merriweather", serif;
-}
-.Purchase-btn{
-    padding: 3%;
-    width: 100%;
-    height: auto;
-
-    background-color: #34C757;
-    color: white;
-
-    border: none;
-    box-shadow: 0 0 5px 2px #510000;
-}
-
-.purchase-para{
-    color: white;
-    font-size: 1.25rem;
-    font-family: "Merriweather", serif;
 }
