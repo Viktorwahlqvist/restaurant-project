@@ -216,3 +216,103 @@ export function searchMenu(searchTerm, db) {
         displayMenu(results);
     }
 }
+// function to display all products the user have added to the list with name, price and table input.
+export function displayCheckOut(){
+    const backToMenu = document.createElement('button');
+    backToMenu.setAttribute('aria-label', 'Back to menu page');
+    // Create the <i> element for the icon
+    const icon = document.createElement("i");
+    icon.classList.add("bx", "bx-arrow-back");
+    backToMenu.appendChild(icon);
+    backToMenu.classList.add('back-btn');
+    // inserBefore, because i want it to appear as firstchild.
+    document.body.insertBefore(backToMenu, document.body.firstChild);
+    backToMenu.addEventListener('click', () => {
+        // Redirect to the menu page when the 'backToMenu' element is clicked.
+        location.assign('menu.html');
+        
+    });
+    // Getitem in 'cart' from local storage and assign it to checkout.
+    const checkOut = localStorage.getItem('cart');
+    if(checkOut){
+        let addPrice = 0;
+        // parse checkout to an object from a string.
+        const cartData = JSON.parse(checkOut);
+        const ul = document.createElement('ul');
+        ul.classList.add('food-drink-ul-checkout');
+        /* Iterate over each key-value pair in cartData.
+        Using Object.entries(cartData), we destructure each entry into 'key' and 'value',
+        enabling access to properties of each cart item, such as value.name or value.price. */
+        for (const[key, value] of Object.entries(cartData)){
+
+            // Product name
+            const checkOutName = document.createElement('p');
+            checkOutName.textContent = value.name;
+            checkOutName.classList.add('checkout-name');
+
+            const checkOutLi = document.createElement('li');
+            checkOutLi.classList.add('checkout-li');
+            checkOutLi.appendChild(checkOutName);
+                // If quantity is more then 1, quantityText will display amount and price
+            if (value.quantity > 1){
+                const quantityText = document.createElement('p');
+                quantityText.textContent = `${value.quantity} x ${value.price}Kr`;
+                quantityText.classList.add('checkout-quantity');
+                checkOutLi.appendChild(quantityText);
+            }
+            else {
+                // Else productPrice will display the product price.
+                const productPrice = document.createElement('p');
+                productPrice.textContent = `${value.price}Kr`;
+                productPrice.classList.add('product-price');
+                checkOutLi.appendChild(productPrice);
+            };
+            ul.appendChild(checkOutLi);
+            // Assign addPrice the total of value.price * value quantity 
+            addPrice += value.price * value.quantity;
+            
+        }
+        // Display the total amount
+        const totalAmountToPay = document.createElement('p');
+        totalAmountToPay.classList.add('totalAmountToPay');
+        totalAmountToPay.textContent = `Total amount to pay ${addPrice}Kr`;
+        ul.appendChild(totalAmountToPay);
+        sectionContainer.appendChild(ul);
+
+        // Input to enter table number.
+        const tableInput = document.createElement('input');
+        tableInput.classList.add('table-input');
+        tableInput.placeholder = 'Enter table number.';
+        tableInput.setAttribute('maxlength', '3');
+        tableInput.setAttribute('aria-label', 'Type the number of your table so we can serve you');
+        tableInput.setAttribute('type', 'number');
+        sectionContainer.appendChild(tableInput);
+
+        // Purchase button
+        const PurchaseBtn = document.createElement('button');
+        PurchaseBtn.classList.add('Purchase-btn');
+        PurchaseBtn.textContent = 'Confirm Purchase';
+        PurchaseBtn.setAttribute('aria-label', 'Confirm your purchase and complete the order');
+        sectionContainer.appendChild(PurchaseBtn);
+        // Purchase button eventlistener.
+        PurchaseBtn.addEventListener('click', () => {
+            // Clear the sectionContainer
+            sectionContainer.innerHTML = '';
+            // Display the purchase paragraph with entered table number.
+            const purchasePara = document.createElement('p');
+            purchasePara.classList.add('purchase-para');
+            purchasePara.textContent = `Thank you for your order! Your payment has been received.  
+            Your food and drinks will be delivered to table number ${tableInput.value}.`;
+            sectionContainer.appendChild(purchasePara);
+
+        });
+
+    } else {
+        // Else display that the checkout is empty.
+        errorMsg.textContent = `Checkout is empty.`;
+        document.body.innerHTML = "";
+        sectionContainer.appendChild(errorMsg);
+        
+    };
+    
+};
