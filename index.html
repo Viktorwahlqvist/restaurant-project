@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Header här -->
+    </header>
+    <main>
+      <section class="contact">
+        <h1>Contact The Sizzling Grillhouse!</h1>
+        <h3>Frequently asked questions</h3>
+        <article class="faq">
+            <details>
+                <summary class="question">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <article class="arrow">&#x25BC;</article>
+                </summary>
+                <article class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
+                </article>
+            </details>
+        </article>
+    
+        <article class="faq">
+            <details>
+                <summary class="question">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <article class="arrow">&#x25BC;</article>
+                </summary>
+                <article class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
+                </article>
+            </details>
+        </article>
+    
+        <article class="faq">
+            <details>
+                <summary class="question">
+                    <p>Lorem ipsum dolor sit amet?</p>
+                    <article class="arrow">&#x25BC;</article>
+                </summary>
+                <article class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
+                </article>
+            </details>
+        </article>
+    
+        <!-- More FAQs here -->
+    </section>
+
+        <section class="contact-form">
+            <h2>General Customer Service</h2>
+            <p>We answer questions in social media and via the contact form below...</p>
+            <form>
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+  
+                <label for="phone">Phone number*</label>
+                <input type="tel" id="phone" name="phone" required>
+  
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" required>
+  
+                <label for="subject">Choose subject*</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="">Food & Drinks</option>
+                    <option value="">Feedback</option>
+                    <option value="">Service</option>
+                    <option value="">Reservation</option>
+                    <!-- More options -->
+                </select>
+  
+                <label for="restaurant">Choose restaurant*</label>
+                <select id="restaurant" name="restaurant" required>
+                    <option value="">Select a restaurant</option>
+                    <option value="">Stockholm</option>
+                    <!-- More options -->
+                </select>
+  
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" required></textarea>
+  
+                <button class="contact-button" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+    <footer>
+        <!-- Footer här -->
+    </footer>
+
+</body>
 </html>
