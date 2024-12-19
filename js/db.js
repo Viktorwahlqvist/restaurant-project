@@ -276,5 +276,63 @@ export const db = {
       "rate": 4,
       "country": "North Bergen, NJ"
     }
+  ],
+  "weeklyFoods": [
+    {
+      "id": "pork-steaks",
+      "img": "https://goldbelly.imgix.net/uploads/product_image/image/41969/pork-steaks.aaa962e22c9099952fdf15cb0382bd65.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Southside Market & Barbeque",
+      "dsc": "Pork Steaks",
+      "price": 69,
+      "rate": 5,
+      "country": "Elgin, TX"
+    },
+    {
+      "id": "3021-slaughterhouse-five-brisket-pork-sausage-turkey",
+      "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/133207/slaughterhouse-five-brisket-pork-sausage-turkey.28b91d5b2fdf226445bb9e1496f4b126.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Joe's KC BBQ",
+      "dsc": "Slaughterhouse Five - Brisket + Pork + Sausage + Turkey",
+      "price": 128.99,
+      "rate": 4,
+      "country": "Kansas City, KS"
+    },
+    {
+      "id": "ribs-brisket-and-burnt-ends",
+      "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Joe's KC BBQ",
+      "dsc": "Joe's KC Ribs, Brisket & Burnt Ends",
+      "price": 110.99,
+      "rate": 4,
+      "country": "Kansas City, KS"
+    }
+  ],
+  "weeklyDrinks": [
+    {
+      "id": "woodford-reserve-mint-julep-syrup",
+      "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134036/woodford-reserve-mint-julep-syrup.ef523ac7cbae5f4aba6b058207f490d2.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Woodford Reserve",
+      "dsc": "Woodford Reserve Mint Julep Syrup",
+      "price": 39,
+      "rate": 4,
+      "country": "Louisville, KY"
+    },
+    {
+      "id": "new-orleans-hurricane-mix",
+      "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/84522/new-orleans-hurricane-mix.4613584fc65cb0787024dd24d2a8f4b3.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Franco's Hurricane Mix",
+      "dsc": "New Orleans Hurricane Mix",
+      "price": 39,
+      "rate": 5,
+      "country": "Natchitoches, LA"
+    },
+    {
+      "id": "evan-williams-gourmet-mint-julep-mix-2-pack",
+      "img": "https://goldbelly.imgix.net/uploads/product_image/image/42820/evan-williams-gourmet-mint-julep-mix-2-pack.a0bd561099dd14bfb33e3363c1c025d0.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      "name": "Evan Williams",
+      "dsc": "Evan Williams Gourmet Mint Julep Mix - 2 Pack",
+      "price": 39,
+      "rate": 4,
+      "country": "Louisville, KY"
+    }
   ]
-}
+};
