@@ -75,7 +75,7 @@
   
   /* Navigation section styling */
   nav {
-    position: fixed;
+    position: relative;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;

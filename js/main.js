@@ -12,13 +12,14 @@ if (window.location.pathname.endsWith('menu.html')) {
         const checkOutBtn = document.createElement('button');
         const checkOutIcon = document.createElement("i");
         checkOutIcon.classList.add('bx', 'bx-cart');
+        const header = document.querySelector('header');
         checkOutBtn.appendChild(checkOutIcon);
         checkOutBtn.classList.add('checkout-btn');
         checkOutBtn.classList.remove('display-info');
         checkOutBtn.id = 'CheckoutBtn'
-        //Use insertBefore to make sure the button does not appear under the script link
-        document.body.insertBefore(checkOutBtn, document.body.firstChild);
         
+        header.insertAdjacentElement('afterend', checkOutBtn);
+
         //Add an event listener to redirect the user to the checkout page when clicked
         checkOutBtn.addEventListener('click', () => {
             location.assign('checkout.html');
@@ -35,7 +36,8 @@ if (window.location.pathname.endsWith('menu.html')) {
         inputSection.classList.add('input-section');
         inputSection.appendChild(searchInput);
         //Use insertBefore to make the input section appear at the top of the webpage
-        document.body.insertBefore(inputSection, document.body.firstChild);
+        
+        header.insertAdjacentElement('afterend', inputSection);
         //Event listener for the search input to filter the menu based on the input value
         searchInput.addEventListener('input', () => {
             searchMenu(searchInput.value, db);
