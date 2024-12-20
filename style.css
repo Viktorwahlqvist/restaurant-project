@@ -10,6 +10,378 @@
     
     
 }
+/* General container for sections, ensuring they don't exceed a maximum width and have padding */
+  .section-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  /* Styling for section headers, including font size, weight, color, and text shadow */
+  .section-header {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--header-font-1);
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 3.75rem;
+    text-shadow: 2px 2px var(--secondary-color);
+  }
+  
+  /* Styling for section descriptions, including color and line-height */
+  .section-description {
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.75rem;
+  }
+  
+  /* Button styling: padding, font size, background color, and hover effect */
+  .btn {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  /* Button hover effect (changes background color) */
+  .btn:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Ensures all images take up 100% of the width and are displayed as block-level elements */
+  img {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Links without underlines and with a smooth transition */
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  /* Body styling: font and background gradient */
+  body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(112deg, rgb(0, 0, 0) 76%, rgb(152, 1, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  /* Navigation section styling */
+  nav {
+    position: fixed;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    z-index: 9;
+  }
+  
+  /* Header styling for the navigation menu */
+  .nav-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+  }
+  
+  /* Logo styling */
+  .nav-logo img {
+    width: 50px;
+  }
+  
+  /* Hides the dark logo (used in light mode) */
+  .nav-logo-dark {
+    display: none;
+  }
+  
+  /* Menu button styling */
+  .nav-menu-btn {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: rgb(145, 18, 18);
+    cursor: pointer;
+  }
+  
+  /* Navigation links, initially hidden, are styled to appear as a column on mobile */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(135, 10, 10, 0.507);
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+  }
+  
+  /* When the nav is open, it slides down into view */
+  .nav-links.open {
+    transform: translateY(0);
+  }
+  
+  /* Styling for individual navigation links */
+  .nav-links a {
+    font-weight: 600;
+    white-space: nowrap;
+    color: beige;
+    transition: 0.3s;
+  }
+  
+  /* Styling for navigation links when hovered */
+  .nav-links a:hover {
+    color: beige;
+  }
+  
+  /* Header content styling (image and text) */
+  .header-container {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+  }
+  
+  /* Image inside the header */
+  .header-image img {
+    max-width: 600px;
+    margin-inline: auto;
+    border-radius: 30px;
+    box-shadow: 2px 5px 10px 10px rgb(20, 1, 1);
+  }
+  
+  /* Styling for the subtitle in the header */
+  .header-content h2 {
+    max-width: 400px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: var(--header-font-2);
+    color: var(--text-dark);
+    border: 2px dashed var(--text-dark);
+    text-align: center;
+  }
+  
+  /* Styling for the main heading in the header */
+  .header-content h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    font-family: var(--header-font-1);
+    color: var(--text-dark);
+    line-height: 3.5rem;
+    text-align: center;
+    text-shadow: 2px 2px var(--white);
+  }
+  
+  /* Styling for the span inside the main heading */
+  .header-content h1 span {
+    font-size: 3rem;
+  }
+  
+  /* Event section content styling */
+  .event-content {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(255, 255, 255, 0.507);
+    border-radius: 15px;
+
+  }
+  
+  /* Text styling for event details */
+  .event-details {
+    text-align: center;
+
+  }
+  
+  /* Header for event details */
+  .event-details h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--header-font-2);
+    color: var(--text-dark);
+  }
+  
+  /* Section header styling inside the event details */
+  .event-details .section-header {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer content styling */
+  .footer-content {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  /* Footer text styling */
+  .footer-content p {
+    font-weight: 5500;
+    color: yellow;
+    line-height: 1.75rem;
+  }
+  
+  /* Social media links in the footer */
+  .footer-socials {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Styling for social media icons */
+  .footer-socials a {
+    font-size: 1.5rem;
+    color: whitesmoke;
+  }
+  
+  /* Footer bar with text, styling for company address */
+  .footer-bar {
+    padding: 0;
+    font-size: 0.9rem;
+    color: rgb(81, 84, 237);
+    text-align: center;
+  }
+  
+  /* Media query for devices with widths greater than 540px */
+  @media (width > 540px) {
+    .banner-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .banner__card:nth-child(1) {
+      grid-area: 1/1/2/3;
+    }
+  
+    .order__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Media query for devices with widths greater than 768px (tablet size and larger) */
+  @media (width > 768px) {
+    nav {
+      position: static;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  
+    .nav-header {
+      padding: 0;
+      background-color: transparent;
+    }
+  
+    .nav-logo img {
+      max-width: 250px;
+    }
+  
+    /* Switch to dark logo */
+    .nav-logo-dark {
+      display: flex;
+    }
+  
+    .nav-logo-white {
+      display: none;
+    }
+  
+    /* Hide the menu button on larger screens */
+    .nav-menu-btn {
+      display: none;
+    }
+  
+    /* Style the navigation links to display inline for larger screens */
+    .nav-links {
+      position: static;
+      padding: 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: transparent;
+      transform: none;
+      z-index: 1;
+    }
+  
+    /* Header content styling for larger screens */
+    .header-container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    .header-content h2 {
+      margin-inline-start: unset;
+    }
+  
+    .header-content h1 {
+      text-align: left;
+    }
+  
+    /* Event section grid for larger screens */
+    .event-content {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  
+    .event-image {
+      grid-area: 1/2/2/3;
+    }
+  
+    /* Align event details text to the left on larger screens */
+    .event-details,
+    .event-details .section-header {
+      text-align: left;
+    }
+  
+    /* Footer content grid for larger screens */
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      color: #f4ece3;
+    }
+  
+    .footer-links li {
+      justify-content: flex-end;
+    }
+  
+    .footer-socials {
+      justify-content: flex-end;
+    }
+  }
+ 
+ /* Media query for devices with widths greater than 1024px (larger screens) */
+  @media (width > 1024px) {
+    .order-grid {
+      gap: 2rem;
+    }
+  } 
+  /* Importing fonts from Google Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  
+  /* Root CSS variables for easy customization of colors and fonts */
+  :root {
+    --primary-color: #000000;
+    --secondary-color: #e42006;
+    --tertiary-color: #e8dbc8;
+    --text-dark: #f4ece3;
+    --menu-color: #f0d9d9;
+    --max-width: 1200px;
+    --header-font-1: "Alfa Slab One", serif;
+    --header-font-2: "Bebas Neue", sans-serif;
+  }
+}
 /* BODY STYLES */
 body {
     position: relative;
@@ -158,7 +530,7 @@ img.food-drink-image {
 .food-drink-image.hidden,
 .display-info {
     display: none;
-}
+
 /* DISPLAY ERRORMSG */
 .error-msg{
     color: red;
@@ -180,6 +552,7 @@ img.food-drink-image {
     width: 100%;
     margin-top: 5%;
     text-align: center;
+
 }
 
 .checkout-name, .checkout-quantity, .totalAmountToPay, .product-price{
@@ -224,3 +597,4 @@ img.food-drink-image {
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
 }
+ 
