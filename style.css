@@ -555,7 +555,8 @@ img.food-drink-image {
 
 }
 
-.checkout-name, .checkout-quantity, .totalAmountToPay, .product-price{
+.checkout-name, .checkout-quantity, .totalAmountToPay, .product-price ,.ol-list{
+
     color: white;
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
@@ -596,5 +597,9 @@ img.food-drink-image {
     color: white;
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
+}
+.ol-list li{
+  list-style: inside;
+  margin-bottom: 4%;
 }
  
