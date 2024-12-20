@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+    
+    <!-- Linking external CSS file for styling -->
+    <link rel="stylesheet" href="../review.css">
+</head>
+<body>
+    <!-- Main container for the review section -->
+    <section class="container">
+        <!-- Header for the page -->
+        <h1>Customer Reviews</h1>
+    
+        <!-- Form to write a review -->
+        <div class="review-form">
+              <!-- Star rating section -->
+              <div class="stars">
+                <!-- Each star represents a rating from 1 to 5 -->
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+              </div>
+
+          <!-- Textarea for the user to write their review -->
+          <textarea id="review-text" placeholder="Write your review here.." rows="5"></textarea>
+
+          <!-- Button to submit the review -->
+          <button id="submit-review">Submit Review</button>
+        </div>
+    
+        <!-- Section to display all submitted reviews -->
+        <div id="reviews-container">
+          <!-- Header for displaying reviews -->
+          <h2>All Reviews:</h2>
+          <!-- This is where all the reviews will be listed dynamically -->
+          <div id="reviews-list"></div>
+        </div>
+    </section>
+    
+    <!-- Linking the external JavaScript file that handles review logic -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
