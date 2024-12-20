@@ -7,9 +7,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+    
 }
-  
-  /* General container for sections, ensuring they don't exceed a maximum width and have padding */
+/* General container for sections, ensuring they don't exceed a maximum width and have padding */
   .section-container {
     max-width: var(--max-width);
     margin: auto;
@@ -381,7 +382,6 @@
     --header-font-2: "Bebas Neue", sans-serif;
   }
 }
-
 /* BODY STYLES */
 body {
     background: linear-gradient(112deg, rgba(19,21,20,1) 76%, rgba(81,0,0,1) 100%);
@@ -413,8 +413,9 @@ ul.food-drink-ul {
 
 /* FOOD AND DRINK PRICE */
 .food-drink-price {
-    display: inline;
+    display: inline-block;
     margin-left: 5%;
+    width: 31%;
 }
 
 /* FOOD AND DRINK TITLE */
@@ -471,30 +472,34 @@ img.food-drink-image {
 
 /* BUTTON STYLES */
 .add-btn, .remove-btn {
-    padding: 1%;
-    margin: 2%;
-    color: white;
-    font-weight: 100;
-    border: none;
-    font-size: 1.75rem;
     cursor: pointer;
+    display: inline flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    
+    color: white;
 }
 
 /* ADD BUTTON */
-.add-btn {
-    background-color: #41c485;
-    border-radius: 2px 2px 20px 2px;
-    box-shadow: 0 6px 20px green;
+.add-btn{
+    margin-left: 7%;
+    background-color: green;
 }
 
 /* REMOVE BUTTON */
 .remove-btn {
     margin-left: 32%;
     background-color: #e2293f;
-    box-shadow: 0 6px 20px #602f0e;
-    border-radius: 5px;
 }
-
+/* BTN */
+.add-btn:active, .remove-btn:active{
+    border: solid 1px black;
+}
 /* INFO BUTTON */
 .info-btn {
     color: white;
@@ -502,9 +507,34 @@ img.food-drink-image {
     border: none;
     font-size: 2rem;
 }
+.info-btn:active{
+    color: rgb(111, 111, 111);
+}
 
 /* HIDDEN IMAGES AND DISPLAY */
 .food-drink-image.hidden,
 .display-info {
     display: none;
+
+/* DISPLAY ERRORMSG */
+.error-msg{
+    color: red;
+    font-family: "Merriweather", serif;
+    font-size: 1.5rem;
+
 }
+.search-input{
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    opacity: 0.5;
+}
+
+.input-section{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+   

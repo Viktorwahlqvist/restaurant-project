@@ -6,8 +6,8 @@ export function displayMenu(db){
     const ul = document.createElement('ul');
     ul.classList.add('food-drink-ul');
 
-    // Loop through each item in the provided section of the database. 
-    // depending on the argument passed to the function.
+    // Loop through each item in the provided section of the database.
+    // The items are grouped based on the database passed as an argument.
     for (const[key, value] of Object.entries(db)){
         // Create a subheader (title) for the menu item.
         const subheader = document.createElement('h2');
@@ -46,25 +46,25 @@ export function displayMenu(db){
         country.textContent = `Country of origin : ${value.country}`;
         country.classList.add('food-drink-country');
 
-        // Create a button for adding to cart
+        // Create a button for adding the item to the cart.
         const addBtn = document.createElement('button');
         // Create the <i> element for the icon
         const icon = document.createElement("i");
-        icon.classList.add("bx", "bx-cart");
+        icon.classList.add("fa-solid", "fa-plus");
         addBtn.appendChild(icon);
         addBtn.classList.add('add-btn');
         addBtn.addEventListener('click', () => {
-            addToCart(value);
+            addToCart(value); // Add the item to the cart when clicked
         });
 
-        // Create a button for removing from cart
+        // Create a button for removing the item from the cart.
         const removeBtn = document.createElement('button');
         const removeIcon = document.createElement("i");
-        removeIcon.classList.add("bx", "bx-trash-alt");
+        removeIcon.classList.add("fa-solid", "fa-minus");
         removeBtn.appendChild(removeIcon);
         removeBtn.classList.add('remove-btn');
         removeBtn.addEventListener('click', () => {
-            removeFromCart(value);
+            removeFromCart(value); // Remove the item from the cart when clicked
         });
 
         // Create a list item to hold all menu item information.
@@ -89,8 +89,8 @@ export function displayMenu(db){
 
         // Add an event listener to toggle the visibility of the article container.
         infoBtn.addEventListener('click', () => {
-            articleContainer.classList.toggle('display-info');
-            image.classList.toggle('hidden');
+            articleContainer.classList.toggle('display-info'); // Toggle article visibility
+            image.classList.toggle('hidden'); // Toggle image visibility
         });
 
         // Append the subheader, image, and article container to the list item.
@@ -158,4 +158,61 @@ function removeFromCart(item){
 
     // Update the localStorage with the updated cart.
     localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Filter based on rating.
+function filterByRate(rate, db) {
+    const results = [];
+    for (const category of Object.keys(db)) {
+        const items = db[category];
+        if (Array.isArray(items)) {
+            results.push(...items.filter(item => item.rate === rate));
+        }
+    }
+    return results;
+}
+
+// General search across all categories.
+function generalSearch(term, db) {
+    const results = [];
+    const lowerTerm = term.toString().toLowerCase();
+
+    for (const category of Object.keys(db)) {
+        const items = db[category];
+        if (Array.isArray(items)) {
+            results.push(...items.filter(item =>
+                Object.values(item).some(value =>
+                    value?.toString().toLowerCase().includes(lowerTerm)
+                )
+            ));
+        }
+    }
+    return results;
+}
+
+// Function that searches the menu based on the user's input.
+export function searchMenu(searchTerm, db) {
+    let results = [];
+    
+    if (!isNaN(searchTerm) && searchTerm.toString().length === 1) {
+        // If the search term is a number of length 1, search for rating.
+       results = filterByRate(Number(searchTerm), db);
+    } else {
+        // Otherwise, do a general search.
+        results = generalSearch(searchTerm, db);
+    }
+    // If there are no results, display an error message.
+    if (results.length === 0){
+        const errorMsg = document.createElement('p');
+        errorMsg.textContent = `Nothing in the menu matches ${searchTerm}`;
+        errorMsg.classList.add('error-msg');
+        document.getElementById('sectionContainer').innerHTML = '';
+        const sectionContainer = document.getElementById('sectionContainer');
+        sectionContainer.appendChild(errorMsg);
+    }
+    else {
+        // Remove the menu and display search results.
+        document.getElementById('sectionContainer').innerHTML = '';
+        displayMenu(results);
+    }
 }
