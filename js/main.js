@@ -1,5 +1,6 @@
-// IMPORT DATABAS
+// IMPORT DATABAS AND DISPLAY FUNCTION
 import {db} from "./db.js";
+import {displayMenu} from "./ui.js";
 
 // Get the menu button (hamburger button), navigation links, and the icon inside the menu button
 const menuBtn = document.getElementById("menu-btn");
@@ -31,4 +32,6 @@ const scrollRevealOption = {
   origin: "bottom",   // The animation will start from the bottom of the element
   duration: 1000,     // The animation duration will be 1000 milliseconds (1 second)
 };
-
+// Change this when we have decided the menu
+displayMenu(db.drinks);
+displayMenu(db.pizzas);
