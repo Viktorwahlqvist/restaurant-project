@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-    <!-- Header HÄR!!!! -->
-    </header>
+    <header class="header">
+        <nav>
+          <div class="nav-header">
+            <!-- Logo section -->
+            <div class="nav-logo">
+              <a href="#">
+                <!-- Logo images (dark and white) for different themes -->
+                <img src="logo.png" alt="logo" class="nav-logo-dark" />
+                <img src="logo.png" alt="logo" class="nav-logo-white" />
+              </a>
+            </div>
+            <!-- Menu button for mobile or smaller screens -->
+            <div class="nav-menu-btn" id="menu-btn">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+  
+          <!-- Navigation links for the website -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="/pages/index.html">HOME</a></li>
+            <li><a href="#event">ABOUT US</a></li>
+            <li><a href="/pages/contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
         
     <main class="contact-main">
       <section class="contact">
@@ -57,7 +76,7 @@
             </details>
         </article>
     
-        <!-- More FAQs here -->
+        <!-- Flera FAQs här -->
     </section>
 
         <section class="contact-form">
@@ -97,7 +116,8 @@
             </form>
         </section>
     </main>
-    <script src="script.js"></script>
+    
+    <script type="module" src="/js/main.js"></script>
 
     <footer>
         <!-- Footer här -->
