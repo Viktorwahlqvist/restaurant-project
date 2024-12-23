@@ -75,7 +75,7 @@
   
   /* Navigation section styling */
   nav {
-    position: relative;
+    position: fixed;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
@@ -597,4 +597,87 @@ img.food-drink-image {
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
 }
+ /* Review design */
  
+ .containr {
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(21, 3, 3, 0);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f0dada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: antiquewhite;
+}
+
+.reviw-form {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #f80303;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf4f9b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4545a0a0;
+}
+
+#reviws-list {
+  margin-top: 20px;
+}
+
+.reviw-item {
+  background-color: #1a751d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviw-item p {
+  font-size: 16px;
+  color: #ffffff;
+}
+/* Grundläggande styling för stjärnorna */
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(40, 117, 189); /* Också kan du justera detta för att få stjärnorna att vara gråa när de inte är fyllda */
+  transition: color 0.3s;
+}
+
+/* När en stjärna är fylld */
+.star.filled {
+  color: gold;
+}
+
+/* När muspekaren är över stjärnorna */
+.star:hover {
+  color: gold;
+}
