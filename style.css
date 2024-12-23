@@ -6,6 +6,8 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* Contact Resturang styling */
 .contact-main{
     padding: 20px;
 }
@@ -73,6 +75,8 @@ body {
     transform: rotate(180deg);
 }
 
+
+/* Contact- form styling */
 .contact-form {
     display: flex;
     flex-direction: column;
