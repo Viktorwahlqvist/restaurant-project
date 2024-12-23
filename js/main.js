@@ -84,9 +84,6 @@ const scrollRevealOption = {
   origin: "bottom",   // The animation will start from the bottom of the element
   duration: 1000,     // The animation duration will be 1000 milliseconds (1 second)
 };
-
-
-
 // Contact Sida
 document.querySelectorAll('.question').forEach(item => {
     item.addEventListener('click', event => {
