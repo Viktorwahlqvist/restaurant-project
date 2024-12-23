@@ -1,127 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav>
-          <div class="nav-header">
-            <!-- Logo section -->
-            <div class="nav-logo">
-              <a href="#">
-                <!-- Logo images (dark and white) for different themes -->
-                <img src="logo.png" alt="logo" class="nav-logo-dark" />
-                <img src="logo.png" alt="logo" class="nav-logo-white" />
-              </a>
-            </div>
-            <!-- Menu button for mobile or smaller screens -->
-            <div class="nav-menu-btn" id="menu-btn">
-              <i class="ri-menu-line"></i>
-            </div>
+      <nav>
+        <div class="nav-header">
+          <!-- Logo section -->
+          <div class="nav-logo">
+            <a href="#">
+              <!-- Logo images (dark and white) for different themes -->
+              <img src="../image/logo.png" alt="logo" class="nav-logo-dark" />
+              <img src="../images/logo.png" alt="logo" class="nav-logo-white" />
+            </a>
           </div>
-  
-          <!-- Navigation links for the website -->
-          <ul class="nav-links" id="nav-links">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="#event">ABOUT US</a></li>
-            <li><a href="/pages/contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
-        
+          <!-- Menu button for mobile or smaller screens -->
+          <div class="nav-menu-btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+
+        <!-- Navigation links for the website -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="#event">ABOUT US</a></li>
+          <li><a href="/pages/contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main class="contact-main">
       <section class="contact">
         <h1>Contact Mavisige</h1>
         <h3>Frequently asked questions</h3>
         <article class="faq">
-            <details>
-                <summary class="question">
-                    <p>Lorem ipsum dolor sit amet?</p>
-                    <article class="arrow">&#x25BC;</article>
-                </summary>
-                <article class="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
-                </article>
-            </details>
+          <details>
+            <summary class="question">
+              <p>Lorem ipsum dolor sit amet?</p>
+              <article class="arrow">&#x25BC;</article>
+            </summary>
+            <article class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                unde assumenda deleniti aspernatur quidem repellat odio officia
+                provident ut laborum quo eaque saepe ea, asperiores non, culpa,
+                maiores perspiciatis possimus!
+              </p>
+            </article>
+          </details>
         </article>
-    
-        <article class="faq">
-            <details>
-                <summary class="question">
-                    <p>Lorem ipsum dolor sit amet?</p>
-                    <article class="arrow">&#x25BC;</article>
-                </summary>
-                <article class="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
-                </article>
-            </details>
-        </article>
-    
-        <article class="faq">
-            <details>
-                <summary class="question">
-                    <p>Lorem ipsum dolor sit amet?</p>
-                    <article class="arrow">&#x25BC;</article>
-                </summary>
-                <article class="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde assumenda deleniti aspernatur quidem repellat odio officia provident ut laborum quo eaque saepe ea, asperiores non, culpa, maiores perspiciatis possimus!</p>
-                </article>
-            </details>
-        </article>
-    
-        <!-- Flera FAQs här -->
-    </section>
 
-        <section class="contact-form">
-            <h2>General Customer Service</h2>
-            <p>We answer questions in social media and via the contact form below...</p>
-            <form>
-                <label for="name">Name*</label>
-                <input type="text" id="name" name="name" required>
-  
-                <label for="phone">Phone number*</label>
-                <input type="tel" id="phone" name="phone" required>
-  
-                <label for="email">E-mail*</label>
-                <input type="email" id="email" name="email" required>
-  
-                <label for="subject">Choose subject*</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Select a subject</option>
-                    <option value="">Food & Drinks</option>
-                    <option value="">Feedback</option>
-                    <option value="">Service</option>
-                    <option value="">Reservation</option>
-                    <!-- More options -->
-                </select>
-  
-                <label for="restaurant">Choose restaurant*</label>
-                <select id="restaurant" name="restaurant" required>
-                    <option value="">Select a restaurant</option>
-                    <option value="">Stockholm</option>
-                    <!-- More options -->
-                </select>
-  
-                <label for="message">Message*</label>
-                <textarea id="message" name="message" required></textarea>
-  
-                <button class="contact-button" type="submit">Send</button>
-            </form>
-        </section>
+        <article class="faq">
+          <details>
+            <summary class="question">
+              <p>Lorem ipsum dolor sit amet?</p>
+              <article class="arrow">&#x25BC;</article>
+            </summary>
+            <article class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                unde assumenda deleniti aspernatur quidem repellat odio officia
+                provident ut laborum quo eaque saepe ea, asperiores non, culpa,
+                maiores perspiciatis possimus!
+              </p>
+            </article>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary class="question">
+              <p>Lorem ipsum dolor sit amet?</p>
+              <article class="arrow">&#x25BC;</article>
+            </summary>
+            <article class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                unde assumenda deleniti aspernatur quidem repellat odio officia
+                provident ut laborum quo eaque saepe ea, asperiores non, culpa,
+                maiores perspiciatis possimus!
+              </p>
+            </article>
+          </details>
+        </article>
+
+        <!-- Flera FAQs här -->
+      </section>
+
+      <section class="contact-form">
+        <h2>General Customer Service</h2>
+        <p>
+          We answer questions in social media and via the contact form below...
+        </p>
+        <form>
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Phone number*</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email">E-mail*</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Choose subject*</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="">Food & Drinks</option>
+            <option value="">Feedback</option>
+            <option value="">Service</option>
+            <option value="">Reservation</option>
+            <!-- More options -->
+          </select>
+
+          <label for="restaurant">Choose restaurant*</label>
+          <select id="restaurant" name="restaurant" required>
+            <option value="">Select a restaurant</option>
+            <option value="">Stockholm</option>
+            <!-- More options -->
+          </select>
+
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button class="contact-button" type="submit">Send</button>
+        </form>
+      </section>
     </main>
-    
+
     <script type="module" src="/js/main.js"></script>
 
     <footer>
-        <!-- Footer här -->
+      <!-- Footer här -->
     </footer>
-
-</body>
+  </body>
 </html>

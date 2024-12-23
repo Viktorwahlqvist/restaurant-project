@@ -75,7 +75,7 @@
   
   /* Navigation section styling */
   nav {
-    position: fixed;
+    position: relative;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
@@ -381,17 +381,6 @@
     --header-font-1: "Alfa Slab One", serif;
     --header-font-2: "Bebas Neue", sans-serif;
   }
-/* BODY STYLES */
-body {
-    position: relative;
-    background: linear-gradient(112deg, rgba(19,21,20,1) 76%, rgba(81,0,0,1) 100%);
-    height: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-}
 
 /* SECTION CONTAINER STYLES */
 .section-container {
@@ -633,7 +622,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+.submit-btn {
   width: 100%;
   padding: 10px;
   background-color: #4caf4f9b;
@@ -645,7 +634,7 @@ button {
   margin-top: 10px;
 }
 
-button:hover {
+.submit-btn:hover {
   background-color: #4545a0a0;
 }
 
@@ -686,15 +675,6 @@ button:hover {
   list-style: inside;
   margin-bottom: 4%;
 }
- body {
-    font-family: "Montserrat", sans-serif;
-    background: linear-gradient(112deg, rgb(0, 0, 0) 76%, rgb(152, 1, 1) 100%);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-}
-
 
 /*----------------------- Contact Resturang styling------------------------ */
 .contact-main{
