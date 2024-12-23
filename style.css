@@ -555,7 +555,8 @@ img.food-drink-image {
 
 }
 
-.checkout-name, .checkout-quantity, .totalAmountToPay, .product-price{
+.checkout-name, .checkout-quantity, .totalAmountToPay, .product-price ,.ol-list{
+
     color: white;
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
@@ -680,4 +681,143 @@ button:hover {
 /* När muspekaren är över stjärnorna */
 .star:hover {
   color: gold;
+}
+.ol-list li{
+  list-style: inside;
+  margin-bottom: 4%;
+}
+ body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(112deg, rgb(0, 0, 0) 76%, rgb(152, 1, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+/*----------------------- Contact Resturang styling------------------------ */
+.contact-main{
+    padding: 20px;
+}
+
+.contact {
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(100,101,101,0.99) 1%, rgba(16,16,16,1) 16%, rgba(17,15,15,1) 82%, rgba(17,14,14,0) 100%);
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h3{
+    
+        color: white;
+        font-family: "Playfair Display", serif;;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 18px   
+}
+
+.contact h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-style: normal;
+        font-family: "Cabin Sketch", serif;    
+}
+
+.question, .answer, .contact-form p{
+    font-family: "Playfair Display", serif;;
+    color: white;
+}
+
+.faq {
+    margin-bottom: 30px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 2px solid #ddd;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+    line-height: 2;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease-out;
+    color: white;
+}
+
+/* Rotera pilen när svaret är öppet */
+.question[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* ----------------------- Contact-form styling ------------------------------ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, rgba(100,101,101,0.99) 1%, rgba(16,16,16,1) 16%, rgba(17,15,15,1) 82%, rgba(17,14,14,0) 100%);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Playfair Display", serif;;
+}
+
+.contact-form h2{
+        color: white;
+        font-family: "Playfair Display", serif;;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 18px  
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff;
+    font-family: "Playfair Display", serif;;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(81,0,0,1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;;
+}
+
+.contact-form button:hover {
+    background-color: rgb(59, 0, 0);
 }
