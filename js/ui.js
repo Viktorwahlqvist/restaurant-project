@@ -334,3 +334,170 @@ export function displayCheckOut(){
     };
     
 };
+
+export function displayWeeklyMenu(weeklyItems) {
+    // Clear the weekly container
+    weeklyContainer.innerHTML = '';
+
+    // Create carousel container
+    const carousel = document.createElement('div');
+    carousel.classList.add('carousel');
+
+    // Create a wrapper for the slides
+    const slidesWrapper = document.createElement('div');
+    slidesWrapper.classList.add('slides-wrapper');
+
+    // Generate slides for each item
+    weeklyItems.forEach(item => {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+
+        // Create a list item structure for menu card
+        const listItem = document.createElement('div');
+        listItem.classList.add('food-drink-li');
+
+        // Add title (subheader)
+        const subheader = document.createElement('h2');
+        subheader.classList.add('food-drink-title');
+        subheader.textContent = item.name;
+
+        // Add image
+        const image = document.createElement('img');
+        image.src = item.img;
+        image.alt = `Picture of ${item.dsc}`;
+        image.classList.add('food-drink-image');
+
+        // Add description
+        const desc = document.createElement('p');
+        desc.classList.add('food-drink-desc');
+        desc.textContent = item.dsc;
+
+        // Add price
+        const price = document.createElement('p');
+        price.classList.add('food-drink-price');
+        price.textContent = `Price: ${item.price}Kr`;
+
+        // Add country of origin
+        const country = document.createElement('p');
+        country.classList.add('food-drink-country');
+        country.textContent = `Country of origin: ${item.country}`;
+
+        // Add rate
+        const rate = document.createElement('p');
+        rate.classList.add('food-drink-rate');
+        rate.textContent = 'Rate: ';
+        for (let i = 0; i < item.rate; i++) {
+            const star = document.createElement('i');
+            star.classList.add('bx', 'bxs-star');
+            rate.appendChild(star);
+        }
+
+        // Add add-to-cart button
+        const addBtn = document.createElement('button');
+        addBtn.setAttribute('aria-label', 'Add item to menu');
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid', 'fa-plus');
+        addBtn.appendChild(icon);
+        addBtn.classList.add('add-btn');
+        addBtn.addEventListener('click', () => {
+            addToCart(item);
+        });
+
+        // Add remove-from-cart button
+        const removeBtn = document.createElement('button');
+        removeBtn.setAttribute('aria-label', 'Remove from the menu');
+        const removeIcon = document.createElement('i');
+        removeIcon.classList.add('fa-solid', 'fa-minus');
+        removeBtn.appendChild(removeIcon);
+        removeBtn.classList.add('remove-btn');
+        removeBtn.addEventListener('click', () => {
+            removeFromCart(item);
+        });
+
+        // Create an article to group description, rate, price, and country details
+        const articleContainer = document.createElement('article');
+        articleContainer.classList.add('food-drink-container', 'display-info');
+
+        // Append all details (description, rate, price, country) to the article container
+        articleContainer.appendChild(desc);
+        articleContainer.appendChild(country);
+        articleContainer.appendChild(rate);
+
+        // Add a button to toggle the visibility of the article container
+        const infoBtn = document.createElement('button');
+        const infoIcon = document.createElement('i');
+        infoIcon.classList.add('bx', 'bx-info-circle');
+        infoBtn.appendChild(infoIcon);
+        infoBtn.classList.add('info-btn');
+        infoBtn.addEventListener('click', () => {
+            articleContainer.classList.toggle('display-info');
+            image.classList.toggle('hidden');
+        });
+
+        // Append all elements to the list item
+        listItem.appendChild(subheader);
+        listItem.appendChild(infoBtn);
+        listItem.appendChild(image);
+        listItem.appendChild(articleContainer);
+        listItem.appendChild(price);
+        listItem.appendChild(removeBtn);
+        listItem.appendChild(addBtn);
+
+        // Append the list item to the slide
+        slide.appendChild(listItem);
+
+        // Append slide to wrapper
+        slidesWrapper.appendChild(slide);
+    });
+
+    // Add navigation controls
+    const prevBtn = document.createElement('button');
+    prevBtn.classList.add('carousel-prev');
+    prevBtn.textContent = '<';
+    const nextBtn = document.createElement('button');
+    nextBtn.classList.add('carousel-next');
+    nextBtn.textContent = '>';
+
+    // Add functionality for navigation
+    let currentIndex = 0;
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + weeklyItems.length) % weeklyItems.length;
+        updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % weeklyItems.length;
+        updateCarousel();
+    });
+
+    // Append controls and slides to carousel
+    carousel.appendChild(prevBtn);
+    carousel.appendChild(slidesWrapper);
+    carousel.appendChild(nextBtn);
+
+    // Append carousel to weekly container
+    weeklyContainer.appendChild(carousel);
+
+    // Update carousel display
+    function updateCarousel() {
+        slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Initialize carousel position
+    updateCarousel();
+}
+
+const checkForElement = setInterval(() => {
+    const weeklyFoods = document.getElementById('weekly-foods');
+    if (weeklyFoods) {
+        clearInterval(checkForElement); // Stop checking once element is found
+        weeklyFoods.addEventListener('click', () => {
+            populateSelectedCarousel('weeklyFoods');
+        });
+    }
+}, 100); // Check every 100ms
+console.log(document.getElementById('weekly-foods'));
+
+function populateSelectedCarousel(category) {
+    console.log(`Populating carousel with category: ${category}`);
+    // Add the carousel population logic here
+}
