@@ -300,6 +300,13 @@ ul.food-drink-ul {
     width: 31%;
 }
 
+#weeklyContainer .food-drink-price { 
+  color: #e63b11de;
+  display: inline-block;
+  margin-left: 5%;
+  width: 31%;
+}
+
 /* FOOD AND DRINK TITLE */
 h2.food-drink-title {
     color: white;
@@ -514,11 +521,26 @@ textarea {
 }
 
 .submit-btn {
+  display: inline-block;
+  text-align: center;
   width: 100%;
   padding: 10px;
   background-color: #4caf4f9b;
   color: white;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-back-btn {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  color: #4caf4f9b;
+  border: 2px solid #4caf4f9b;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -707,13 +729,11 @@ color: white;
 }
 /* Weekly Container */
 #weeklyContainer {
-    height: 550px;
     background: #1c1c1c; /* Dark background for contrast */
     border: 1px solid #ffffff5e; /* Subtle gray border for definition */
     border-radius: 10px; /* Rounded corners for a polished look */
-    padding: 20px; /* Add space inside the container */
     margin: 20px auto; /* Center the container with spacing */
-    width: 90%; /* Responsive width */
+    width: 80%; /* Responsive width */
     max-width: 400px; /* Maximum width for mobile view */
     box-shadow: 0px 0px 10px rgba(255, 68, 0, 0.8); /* Fiery glow effect */
     position: relative;
@@ -799,11 +819,11 @@ color: white;
 }
 
 .carousel-prev {
-    left: 10px;
+    left: 2px;
 }
 
 .carousel-next {
-    right: 10px;
+    right: 2px;
 }
 
 .carousel-prev:hover,
@@ -816,7 +836,7 @@ color: white;
     display: flex; /* Display buttons side by side */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    width: 420px; /* Fixed width for the combined buttons */
+    width: 100%; /* Fixed width for the combined buttons */
     margin: 20px auto; /* Center the container on the page */
     position: relative;
 }
@@ -890,7 +910,7 @@ color: white;
     display: flex; /* Display buttons side by side */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    width: 400px; /* Fixed width for the combined buttons */
+    width: 95%; /* Fixed width for the combined buttons */
     margin: 20px auto; /* Center the container on the page */
     position: relative;
 }
@@ -905,7 +925,7 @@ color: white;
 
 #specials-text h1 {
     font-family: 'Bebas Neue', Arial, sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: #ffffff;
     background: linear-gradient(to right, #ff4500, #fdcf58);
     -webkit-background-clip: text;
@@ -919,23 +939,13 @@ color: white;
 
 
 /* Fire Emoji Badge */
-.left-fire::after {
-    content: "🔥";
-    position: absolute;
-    top: 0px;
-    left: 15%;
-    transform: translateX(-100%);
-    font-size: 3rem; /* Adjust size of the emoji */
-    animation: fadeBadge 3s infinite; /* Add fade animation */
+.left-fire{
+  font-size: 3rem;
+  animation: fadeBadge 3s infinite; /* Add fade animation */
 }
-
-.right-fire::after {
-    content: "🔥";
-    position: absolute;
-    top: 0px;
-    transform: translateX(-100%);
-    font-size: 3rem; /* Adjust size of the emoji */
-    animation: fadeBadge 3s infinite; /* Add fade animation */
+.right-fire{
+  font-size: 3rem;
+  animation: fadeBadge 3s infinite; /* Add fade animation */
 }
 
 /* Badge Fade Animation */
@@ -960,5 +970,4 @@ color: white;
     margin: 20px 0; /* Add spacing above and below */
     text-transform: uppercase; /* Capitalize all text */
     letter-spacing: 2px; /* Add some spacing between letters for a bold effect */
-
 }

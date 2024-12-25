@@ -4,7 +4,6 @@ const sectionContainer = document.getElementById('sectionContainer');
 
 // Function to display menu items from the database.
 export function displayMenu(db){
-    console.log(db);
     
     // Create an unordered list to hold menu items.
     const ul = document.createElement('ul');
@@ -495,7 +494,6 @@ const checkForElement = setInterval(() => {
         });
     }
 }, 100); // Check every 100ms
-console.log(document.getElementById('weekly-foods'));
 
 function populateSelectedCarousel(category) {
     console.log(`Populating carousel with category: ${category}`);
