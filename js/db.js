@@ -277,4 +277,3 @@ export const db = {
       "country": "North Bergen, NJ"
     }
   ]
-}
